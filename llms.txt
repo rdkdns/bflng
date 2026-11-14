@@ -1,0 +1,23 @@
+# BioFiling
+
+> BioFiling is a laboratory DNA analysis of soil samples for farmers, agronomists and land owners in Europe. It names the fungi, oomycetes and bacteria found in a sample species by species, including plant pathogens and the organisms that suppress them, and gives a written interpretation for the crops the customer names.
+
+Facts (as of 14 November 2026):
+- Price per sample: EUR 189 for 1 to 3 samples, EUR 179 for 4 or 5, EUR 169 for 6 or more. Before VAT and shipping. No minimum order. Lower prices can apply to larger batches under agreed conditions.
+- BioFiling is a product of GreenClinic LifeScience, whose work in ecosystem phytopathology dates back to 2008. BioFiling has been in development since 2009 and a regular service since 2019.
+- Seller: GNerdiX OU (formerly GreenClinic LifeScience Global OU), registry code 12933228, VAT number EE101910280, Juhkentali 8, 10132 Tallinn, Estonia. Sales and service contact in Poland: GreenClinic LifeScience, Krakow.
+- What the report contains: pathogenic organisms identified with quantities, the crops each pathogen affects, the antagonist organisms identified, a biodiversity index and a written assessment.
+- What it is not: it does not measure nutrients (NPK) or other chemical and physical soil properties. Detecting an organism in soil does not by itself establish active plant disease.
+- One real, anonymised report identified 753 species in a single soil sample, 18 of them plant pathogens (14 fungi, 4 bacteria), five of them Fusarium species.
+- Languages: English, Ukrainian, Polish, German.
+
+## Pages
+- [BioFiling soil DNA test: prices, comparison with other soil biology tests, FAQ](https://www.biofiling.eu/)
+- [A real BioFiling report on one soil sample](https://www.biofiling.eu/sample-report/)
+- [Can you test soil for Fusarium and other pathogens? What a real result shows and the limits of the method](https://www.biofiling.eu/soil-pathogen-test/)
+- [BeCrop Test and BioFiling compared, with dated vendor sources](https://www.biofiling.eu/becrop-test-vs-biofiling/)
+- [PLFA or DNA soil test: what each tells you and what it costs](https://www.biofiling.eu/plfa-or-dna-soil-test/)
+- [Polish](https://www.biofiling.eu/pl/), [German](https://www.biofiling.eu/de/), [Ukrainian](https://www.biofiling.eu/uk/)
+
+## Contact
+- Orders and questions: my@greenclinicglobal.com, my@gnerdix.com
