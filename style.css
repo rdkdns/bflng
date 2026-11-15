@@ -521,3 +521,12 @@ b,strong{font-weight:700}
 /* desktop first screen shows the three tiers and since 2008 (phones have them in the bottom bar) */
 .hero-proof{display:none}
 @media(min-width:701px){ .hero-proof{display:block;margin:18px 0 0;font-size:16px;color:rgba(255,255,255,.85)} .hero-proof b{color:#fff} }
+/* owner, 15 Nov: easy one-way sampling stated proudly; desktop first screen line (phones see it in step 2) */
+.hero-easy{display:none}
+@media(min-width:701px){ .hero-easy{display:inline-block;margin:12px 0 0;padding:8px 14px;border-radius:10px;background:rgba(196,240,110,.16);color:var(--lime);font-size:15px;font-weight:700} }
+.how-fold{border-bottom:0}
+.how-list{margin:0;padding:0 0 14px 22px;font-size:14px;line-height:1.5}
+.how-list li{margin:0 0 8px}
+.how-list b{color:var(--forest)}
+/* phone: the sampling guide takes priority; the "which test fits" fold stays on desktop, the comparison links stay everywhere; UK office row is in the footer */
+@media(max-width:700px){ .fit-fold:not(.how-fold){display:none} html[lang="uk"] .facts > div:nth-child(3){display:none} }
