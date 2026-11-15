@@ -505,3 +505,16 @@ b,strong{font-weight:700}
 /* one logo everywhere (owner, 15 Nov: "may be same nice unified"): leaf mark + BioFiling(TM) + spaced small caps line */
 .brand-t small{text-transform:uppercase;letter-spacing:.09em;font-size:13px;font-weight:700;color:var(--muted);margin-top:2px}
 @media(max-width:700px){ .fit-fold{margin-top:8px} }
+/* phone: the three steps return in compact form (what happens after paying), 15 Nov */
+@media(max-width:700px){
+  .flow-h{display:block;font-size:17px;margin:0 0 8px}
+  .flow{display:block;margin-bottom:8px}
+  .flow li{padding:0 0 8px 28px}
+  .flow h4{font-size:15px;margin:0}
+  .flow p{font-size:13px;line-height:1.35;margin:0}
+  .site-foot{padding-top:26px}
+  .foot-main{gap:10px}
+}
+/* phone, EN/PL/DE: seller and Polish-contact rows are shown in the footer just below, so the about section keeps only the 2008 row */
+@media(max-width:700px){ html:not([lang="uk"]) .facts > div:nth-child(n+2){display:none} }
+@media(max-width:700px){ .faq-list summary{padding:9px 32px 9px 0;min-height:48px} .facts div{padding:6px 0} }
