@@ -518,3 +518,6 @@ b,strong{font-weight:700}
 /* phone, EN/PL/DE: seller and Polish-contact rows are shown in the footer just below, so the about section keeps only the 2008 row */
 @media(max-width:700px){ html:not([lang="uk"]) .facts > div:nth-child(n+2){display:none} }
 @media(max-width:700px){ .faq-list summary{padding:9px 32px 9px 0;min-height:48px} .facts div{padding:6px 0} }
+/* desktop first screen shows the three tiers and since 2008 (phones have them in the bottom bar) */
+.hero-proof{display:none}
+@media(min-width:701px){ .hero-proof{display:block;margin:18px 0 0;font-size:16px;color:rgba(255,255,255,.85)} .hero-proof b{color:#fff} }
