@@ -26,7 +26,7 @@
 <body>
 <header class="site-head" id="top">
   <div class="wrap head-in">
-    <a class="brand" href="/pl/" aria-label="BioFiling"><svg class="leaf" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#c4f06e"/><g fill="none" stroke="#14372a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M32 10c14 5 21 14 19 26-2 9-10 14-19 17-9-3-17-8-19-17-2-12 5-21 19-26Z"/><path d="M21 29c4-7 11-9 21-5M21 39c7-9 14-9 22-5M30 46l12-10"/></g></svg><span class="brand-t"><strong>BioFiling<sup>™</sup></strong><small>od GreenClinic LifeScience</small></span></a>
+    <a class="brand" href="/pl/" aria-label="BioFiling"><svg class="leaf" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"><path d="M32 10c14 5 21 14 19 26-2 9-10 14-19 17-9-3-17-8-19-17-2-12 5-21 19-26Z"/><path d="M21 29c4-7 11-9 21-5M21 39c7-9 14-9 22-5M30 46l12-10"/></g></svg><span class="brand-t"><strong>BioFiling<sup>™</sup></strong><small>od GreenClinic LifeScience</small></span></a>
     <nav class="head-nav" aria-label="Nawigacja główna"><a href="/pl/#report">Raport</a><a href="/pl/#pricing">Cena</a><a href="/pl/#about">Kim jesteśmy</a><a href="/pl/#faq">Pytania</a></nav>
     <nav class="langs" aria-label="Language"><a href="/sample-report/" hreflang="en" lang="en">EN</a><a href="/sample-report/uk/" hreflang="uk" lang="uk">UK</a><a href="/sample-report/pl/" hreflang="pl" lang="pl" aria-current="page">PL</a><a href="/sample-report/de/" hreflang="de" lang="de">DE</a></nav>
     <a class="btn btn-dark btn-sm head-cta" href="/pl/#pricing" data-where="header">Zamów</a>
@@ -35,7 +35,7 @@
 
   <div class="container rep">
     <div class="rep-head">
-      <svg class="leaf" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#c4f06e"/><g fill="none" stroke="#14372a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M32 10c14 5 21 14 19 26-2 9-10 14-19 17-9-3-17-8-19-17-2-12 5-21 19-26Z"/><path d="M21 29c4-7 11-9 21-5M21 39c7-9 14-9 22-5M30 46l12-10"/></g></svg>
+      <svg class="leaf" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"><path d="M32 10c14 5 21 14 19 26-2 9-10 14-19 17-9-3-17-8-19-17-2-12 5-21 19-26Z"/><path d="M21 29c4-7 11-9 21-5M21 39c7-9 14-9 22-5M30 46l12-10"/></g></svg>
       <div>
         <h1>Biologiczna analiza patogenów gleby</h1>
         <p>Przykładowy raport: jedna próbka gleby. Przekład z oryginalnego raportu.</p>
@@ -51,7 +51,7 @@
     </div>
     <p>Indeks bioróżnorodności (4,8769 przy normie 2,3) wskazuje na wysoki poziom różnorodności gatunkowej, który zapobiega szybkiemu rozprzestrzenianiu się lub dominacji pojedynczego patogenu.</p>
 
-    <h2>1. Zidentyfikowane organizmy patogeniczne</h2>
+    <div class="gate" id="gate"><h2 class="gate-h">Zobacz pełny raport</h2><p>Zostaw adres e-mail, a cały raport otworzy się od razu: wszystkie 18 patogenów z ilościami, uprawy, którym zagrażają, organizmy pożyteczne i pisemne podsumowanie.</p><form id="gate-form" novalidate><label>E-mail<input name="email" type="email" required autocomplete="email" maxlength="160"></label><label>Imię i nazwisko (opcjonalnie)<input name="name" autocomplete="name" maxlength="120"></label><input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"><label class="consent"><input type="checkbox" name="consent" required><span>Zgadzam się, aby GNerdiX OÜ (BioFiling) przechowywała mój adres e-mail i mogła pisać do mnie w sprawie BioFiling. Mogę wycofać zgodę w każdej chwili, pisząc na my@gnerdix.com.</span></label><button class="btn btn-dark" type="submit">Otwórz pełny raport</button></form><p class="gate-fail" hidden>Nie udało się automatycznie zapisać Twojego adresu. Wyślij go nam tym przyciskiem, abyśmy mogli się odezwać: <a class="btn btn-outline btn-sm" id="gate-mail" href="mailto:my@greenclinicglobal.com">Wyślij mój e-mail</a></p></div><div class="gated-body"><h2>1. Zidentyfikowane organizmy patogeniczne</h2>
     <div class="scroll-x" tabindex="0">
     <table>
       <thead><tr><th>Organizm</th><th>Grupa</th><th>S / U</th><th>Ilość*</th></tr></thead>
@@ -141,6 +141,7 @@
     <p>Takie podejście pozwala nie tylko wykryć konkretny gatunek, lecz także ocenić jego udział w ogólnej strukturze mikrobiomu. Można wykryć nawet mikroorganizmy obecne w bardzo małych ilościach, co czyni metodę niezwykle czułą. Im wyższa wartość, tym większa liczebność gatunku w próbce.</p>
     <p>Ponieważ do analizy używa się 250 mg gleby, liczbę markerów w 1 kg gleby oblicza się jako: liczba genów markerowych × (1000 / 0,25) = liczba genów markerowych × 4000.</p>
 
+    </div><script>(function(){var K="bf_report_ok",d=document.documentElement,f=document.getElementById("gate-form");function open(){d.classList.remove("gated");try{localStorage.setItem(K,"1")}catch(e){}}try{if(localStorage.getItem(K)==="1")return}catch(e){}d.classList.add("gated");f.addEventListener("submit",function(ev){ev.preventDefault();var em=f.email.value.trim();if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(em)){f.email.setAttribute("aria-invalid","true");f.email.focus();return}if(!f.consent.checked){f.consent.focus();return}if(f.website.value){open();return}var nm=f.name.value.trim(),b={intent:"report",stage:1,email:em,lang:d.lang,consent:true,message:"Sample report sign-up"+(nm?", name: "+nm:""),referrer:document.referrer};fetch("/api/order",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(b)}).then(function(r){return r.ok}).catch(function(){return false}).then(function(ok){open();if(!ok){var p=document.querySelector(".gate-fail");p.hidden=false;document.getElementById("gate-mail").href="mailto:my@greenclinicglobal.com?subject="+encodeURIComponent("BioFiling sample report")+"&body="+encodeURIComponent("Email: "+em+(nm?"\nName: "+nm:""))}try{navigator.sendBeacon&&navigator.sendBeacon("/api/e",JSON.stringify({step:ok?"form_ok":"form_fail",lang:d.lang,path:location.pathname,where:"report-gate"}))}catch(e){}})})})();</script>
     <div class="rep-actions">
       <button class="btn btn-dark" type="button" onclick="window.print()">Drukuj lub zapisz jako PDF</button>
       <a class="btn btn-outline" href="/pl/#pricing">Zamów analizę</a>
@@ -150,11 +151,11 @@
 <footer class="site-foot">
   <div class="wrap">
     <div class="foot-main">
-      <div class="foot-id"><strong class="foot-brand"><svg class="leaf" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#c4f06e"/><g fill="none" stroke="#14372a" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><path d="M32 10c14 5 21 14 19 26-2 9-10 14-19 17-9-3-17-8-19-17-2-12 5-21 19-26Z"/><path d="M21 29c4-7 11-9 21-5M21 39c7-9 14-9 22-5M30 46l12-10"/></g></svg><span>BioFiling<sup>™</sup></span></strong><p>Biologiczna analityka DNA próbek gleby i roślin dla decyzji w rolnictwie.</p><p class="foot-guides"><a href='/pl/badanie-gleby-na-patogeny/'>Czy można zbadać glebę na Fusarium?</a></p></div>
+      <div class="foot-id"><strong class="foot-brand"><svg class="leaf" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="4.6" stroke-linecap="round" stroke-linejoin="round"><path d="M32 10c14 5 21 14 19 26-2 9-10 14-19 17-9-3-17-8-19-17-2-12 5-21 19-26Z"/><path d="M21 29c4-7 11-9 21-5M21 39c7-9 14-9 22-5M30 46l12-10"/></g></svg><span>BioFiling<sup>™</sup></span></strong><p>Biologiczna analityka DNA próbek gleby i roślin dla decyzji w rolnictwie.</p><p class="foot-guides"><a href='/pl/badanie-gleby-na-patogeny/'>Czy można zbadać glebę na Fusarium?</a></p></div>
       <div class="foot-contact"><h4>GreenClinic LifeScience · Polska</h4><a href="mailto:my@greenclinicglobal.com">my@greenclinicglobal.com</a><a href="tel:+48600635929">+48 600 635 929</a><span>ul. Zamknięta 10 / 1.5, 30-554 Kraków</span></div>
       <div class="foot-contact"><h4>GNerdiX OÜ · Estonia</h4><a href="mailto:my@gnerdix.com">my@gnerdix.com</a><a href="tel:+37254584181">+372 5458 4181</a><span>Juhkentali 8, 10132 Tallinn, Estonia</span></div>
     </div>
-    <div class="foot-bottom"><span>© 2026 GreenClinic LifeScience. BioFiling™ – produkt GreenClinic LifeScience. Sprzedawca: GNerdiX OÜ, kod rejestrowy 12933228, VAT EE101910280, Juhkentali 8, 10132 Tallinn, Estonia.</span><span>Nazwy produktów innych firm służą wyłącznie do wskazania porównywanych produktów i należą do ich właścicieli.</span></div>
+    <div class="foot-bottom"><span>© 2026 GreenClinic LifeScience Sp. z o. o. BioFiling™ by GreenClinic LifeScience Sp. z o. o. Sprzedawca: GNerdiX OÜ, kod rejestrowy 12933228, VAT EE101910280, Juhkentali 8, 10132 Tallinn, Estonia.</span><span>Nazwy produktów innych firm służą wyłącznie do wskazania porównywanych produktów i należą do ich właścicieli.</span></div>
   </div>
 </footer>
 <div class="bar-bottom"><div class="bar-price"><strong>189 · 179 · 169 €</strong><small>za próbkę: 1–3 · 4–5 · 6+</small></div><a class="btn btn-dark btn-sm" href="/pl/#pricing" data-where="mobile-bar">Zamów</a></div>
