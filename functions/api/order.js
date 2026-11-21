@@ -72,7 +72,7 @@ export async function onRequestPost({ request, env }) {
     'Type: ' + INTENTS[intent] + (stage === 2 ? ' (details added after a sample-report request)' : '') + '\n' +
     'Samples: ' + (samples || 'not stated') + '\n' +
     'Price shown on the page: ' + (intent !== 'order' || !samples ? 'not applicable'
-      : 'EUR ' + unit + ' per sample, EUR ' + samples * unit + ' before VAT and shipping') + '\n' +
+      : 'EUR ' + unit + ' per sample, EUR ' + samples * unit + ' (VAT included where it applies; shipping extra)') + '\n' +
     'Country: ' + (country || 'not stated') + '\n' +
     'Crops: ' + (crop || 'not stated') + '\n' +
     'Page language: ' + (lang || 'not stated') + '\n' +

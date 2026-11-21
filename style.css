@@ -518,12 +518,12 @@ b,strong{font-weight:700}
 /* phone, EN/PL/DE: seller and Polish-contact rows are shown in the footer just below, so the about section keeps only the 2008 row */
 @media(max-width:700px){ html:not([lang="uk"]) .facts > div:nth-child(n+2){display:none} }
 @media(max-width:700px){ .faq-list summary{padding:9px 32px 9px 0;min-height:48px} .facts div{padding:6px 0} }
-/* desktop first screen shows the three tiers and since 2008 (phones have them in the bottom bar) */
-.hero-proof{display:none}
-@media(min-width:701px){ .hero-proof{display:block;margin:18px 0 0;font-size:16px;color:rgba(255,255,255,.85)} .hero-proof b{color:#fff} }
-/* owner, 15 Nov: easy one-way sampling stated proudly; desktop first screen line (phones see it in step 2) */
-.hero-easy{display:none}
-@media(min-width:701px){ .hero-easy{display:inline-block;margin:12px 0 0;padding:8px 14px;border-radius:10px;background:rgba(196,240,110,.16);color:var(--lime);font-size:15px;font-weight:700} }
+/* first screen shows the three tiers, since 2008 and easy one-way sampling on both phones and desktop */
+.hero-proof{display:block;margin:14px 0 0;font-size:14px;line-height:1.45;color:rgba(255,255,255,.88)}
+.hero-proof b{color:#fff}
+@media(min-width:701px){ .hero-proof{margin:18px 0 0;font-size:16px} }
+.hero-easy{display:inline-block;margin:10px 0 0;padding:7px 12px;border-radius:10px;background:rgba(196,240,110,.16);color:var(--lime);font-size:14px;font-weight:700;line-height:1.35}
+@media(min-width:701px){ .hero-easy{margin:12px 0 0;padding:8px 14px;font-size:15px} }
 .how-fold{border-bottom:0}
 .how-list{margin:0;padding:0 0 14px 22px;font-size:14px;line-height:1.5}
 .how-list li{margin:0 0 8px}

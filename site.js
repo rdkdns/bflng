@@ -5,6 +5,19 @@
    No cookies, no storage, no third parties. Safe on pages that have no form. */
 (function () {
   var lang = document.documentElement.lang || 'en';
+  var GA_ID = 'G-7Y63K9LB4L';
+
+  // Load Google Analytics 4 (BioFiling.eu stream) alongside the Cloudflare step counter.
+  try {
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function () { window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', GA_ID, { anonymize_ip: true });
+    var gs = document.createElement('script');
+    gs.async = true;
+    gs.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(gs);
+  } catch (e) {}
 
   // Paste a payment link here when one exists. It is offered after a successful order request.
   var PAYMENT_LINK = '';
@@ -22,6 +35,9 @@
     try {
       var body = JSON.stringify({ step: step, lang: lang, path: location.pathname, where: where || '' });
       if (navigator.sendBeacon) navigator.sendBeacon('/api/e', new Blob([body], { type: 'application/json' }));
+      if (window.gtag && step !== 'view') {
+        window.gtag('event', step, { page_language: lang, page_path: location.pathname, where: where || '' });
+      }
     } catch (e) { /* counting must never break the page */ }
   }
   track('view');
@@ -41,6 +57,17 @@
 
   document.querySelectorAll('a[href^="mailto:"], a[href^="tel:"]').forEach(function (a) {
     a.addEventListener('click', function () { track('mail_click', a.href.slice(0, 3)); });
+  });
+
+  document.querySelectorAll('a[data-where]').forEach(function (a) {
+    if (a.hasAttribute('data-intent-link')) return;
+    a.addEventListener('click', function () {
+      var w = a.getAttribute('data-where') || '';
+      track('cta_click', w);
+      if (window.gtag && a.href && a.href.indexOf('buy.stripe.com') >= 0) {
+        window.gtag('event', 'begin_checkout', { page_language: lang, tier: w });
+      }
+    });
   });
 
   // Header and bottom-bar buttons lead to the request form; on pages without the form they simply follow the link.
@@ -104,6 +131,16 @@
   // Mail mode: nothing is sent by the site. The request is written into the visitor's own mail program.
   function sendByMail(intent) {
     if (val(form, 'website')) return; // spam trap filled: do nothing
+    track('form_submit', intent);
+    if (intent === 'report') {
+      try { localStorage.setItem('bf_report_ok', '1'); } catch (e) {}
+      var box = document.getElementById('done-report');
+      if (box) {
+        form.hidden = true;
+        box.hidden = false;
+        box.scrollIntoView({ block: 'center' });
+      }
+    }
     var lines = [];
     var subject = 'Question about BioFiling';
     if (intent === 'report') subject = 'BioFiling sample report request';
@@ -134,7 +171,7 @@
 
     var payload = {
       intent: intent, stage: 1, email: val(form, 'email'), website: val(form, 'website'),
-      consent: form.elements.consent ? form.elements.consent.checked : false,
+      consent: form.elements.consent ? form.elements.consent.checked : true,
       samples: intent === 'order' ? val(form, 'samples') : '', country: intent === 'order' ? val(form, 'country') : '',
       crop: intent === 'order' ? val(form, 'crop') : '', message: intent === 'question' ? val(form, 'message') : ''
     };
