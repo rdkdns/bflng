@@ -19,5 +19,8 @@ Facts (as of 14 November 2026):
 - [PLFA or DNA soil test: what each tells you and what it costs](https://www.biofiling.eu/plfa-or-dna-soil-test/)
 - [Polish](https://www.biofiling.eu/pl/), [German](https://www.biofiling.eu/de/), [Ukrainian](https://www.biofiling.eu/uk/)
 
+## Turnaround
+- About 3 weeks from the day the sample is received at the laboratory (about 20 days of laboratory work, then an automated assessment).
+
 ## Contact
 - Orders and questions: my@greenclinicglobal.com, my@gnerdix.com
