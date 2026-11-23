@@ -20,7 +20,7 @@ Facts (as of 14 November 2026):
 - [Polish](https://www.biofiling.eu/pl/), [German](https://www.biofiling.eu/de/), [Ukrainian](https://www.biofiling.eu/uk/)
 
 ## Turnaround
-- About 3 weeks from the day the sample is received at the laboratory (about 20 days of laboratory work, then an automated assessment).
+- Usually 3 to 4 weeks from the day the sample is received at the laboratory, at most 6 weeks. The assessment step is automated. For comparison, Biome Makers states usually 4 to 6 weeks for the BeCrop Test.
 
 ## Contact
 - Orders and questions: my@greenclinicglobal.com, my@gnerdix.com
