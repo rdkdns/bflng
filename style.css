@@ -553,3 +553,11 @@ html:not(.gated) .gate:has(.gate-fail:not([hidden])) > :not(.gate-fail){display:
 .qty-box input{width:92px;font:inherit;font-size:18px;padding:8px 10px;border:1px solid rgba(0,0,0,.25);border-radius:8px}
 .qty-total{font-weight:600;min-width:12ch}
 .qty-note{flex-basis:100%;margin:0;font-size:14px;color:var(--muted)}
+.flow-time .when{display:block;font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--forest);margin:0 0 4px}
+.flow-time li:not(:last-child)::before{content:"";position:absolute;left:5px;bottom:-6px;border-top:9px solid var(--forest);border-left:6px solid transparent;border-right:6px solid transparent;z-index:1}
+.flow-time .outcome .dot{background:var(--forest)}
+.flow-time .outcome h4{color:var(--forest)}
+@media(min-width:701px){
+  .flow.flow-time{grid-template-columns:repeat(4,1fr)}
+  .flow-time li:not(:last-child)::before{left:auto;right:-34px;bottom:auto;top:5px;border-left:9px solid var(--forest);border-top:6px solid transparent;border-bottom:6px solid transparent;border-right:0}
+}
