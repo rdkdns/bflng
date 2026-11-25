@@ -561,3 +561,4 @@ html:not(.gated) .gate:has(.gate-fail:not([hidden])) > :not(.gate-fail){display:
   .flow.flow-time{grid-template-columns:repeat(4,1fr)}
   .flow-time li:not(:last-child)::before{left:auto;right:-34px;bottom:auto;top:5px;border-left:9px solid var(--forest);border-top:6px solid transparent;border-bottom:6px solid transparent;border-right:0}
 }
+.qty-rule{flex-basis:100%;margin:0;font-weight:600;color:var(--ink)}
