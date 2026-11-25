@@ -571,3 +571,6 @@ html:not(.gated) .gate:has(.gate-fail:not([hidden])) > :not(.gate-fail){display:
 .pb-rule{margin:6px 0 14px;font-weight:600}
 @media(max-width:480px){.price-big .pb-p{font-size:32px}}
 .qty-total{font-size:22px;font-weight:800;color:var(--forest)}
+/* Logo mark as on the favicon (Denis Radiuk, 25 Nov 2026): dark green leaf on the lime rounded square */
+.leaf{background:#c4f06e;color:#14372a;padding:4px;box-sizing:border-box;border-radius:9px}
+.leaf path{stroke-width:4}
