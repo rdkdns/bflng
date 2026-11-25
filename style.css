@@ -574,3 +574,4 @@ html:not(.gated) .gate:has(.gate-fail:not([hidden])) > :not(.gate-fail){display:
 /* Logo mark as on the favicon (Denis Radiuk, 25 Nov 2026): dark green leaf on the lime rounded square */
 .leaf{background:#c4f06e;color:#14372a;padding:4px;box-sizing:border-box;border-radius:9px}
 .leaf path{stroke-width:4}
+.site-foot .leaf,.dark .leaf,.band-dark .leaf{color:#14372a}
