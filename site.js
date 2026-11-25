@@ -248,16 +248,8 @@
     if (note) { note.hidden = n <= 10; note.textContent = n > 10 ? more.replace('{n}', n) : ''; }
     pay.href = 'https://buy.stripe.com/' + (n <= 10 ? L[n] : MORE);
     pay.setAttribute('data-tier', tier);
-    document.querySelectorAll('table.tiers tr').forEach(function (tr) { tr.classList.toggle('best', !!tr.querySelector('a[data-where="' + tier + '"]')); });
+    var rows = document.querySelectorAll('table.tiers tr'), idx = n <= 3 ? 0 : n <= 5 ? 1 : 2;
+    rows.forEach(function (tr, i) { tr.classList.toggle('best', i === idx); });
   }
   input.addEventListener('input', update); update();
-  var MIN = { tier1: 1, tier2: 4, tier3: 6 };
-  document.querySelectorAll('table.tiers a[data-where]').forEach(function (a) {
-    a.addEventListener('click', function (e) {
-      e.preventDefault();
-      var m = MIN[a.getAttribute('data-where')] || 1;
-      if ((parseInt(input.value, 10) || 0) < m || (m < 4 && input.value > 3) || (m === 4 && input.value > 5)) input.value = m;
-      update(); box.scrollIntoView({ behavior: 'smooth', block: 'center' }); input.focus(); input.select();
-    });
-  });
 })();
