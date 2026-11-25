@@ -240,11 +240,12 @@
   var L = ['', '14A4gz0FF40wcvF8NH3Je03', '28EdR92NN7cI1R15Bv3Je04', '7sYbJ1ewvfJe0MX8NH3Je05', 'eVqbJ13RR2WseDNaVP3Je06', 'cNibJ11JJaoU2V5bZT3Je07',
            '00w14nbkj9kQ2V55Bv3Je08', '8x228r743bsYcvF3tn3Je09', 'fZu6oH3RRaoUbrBd3X3Je0a', '14A9ATbkj9kQ0MXbZT3Je0b', '6oU7sL2NNfJe3Z93tn3Je0c'];
   var MORE = '6oU8wPgED8gM67hbZT3Je0d';
-  var per = box.getAttribute('data-per'), tot = box.getAttribute('data-total');
+  var note = document.getElementById('bfQtyNote'), more = box.getAttribute('data-more') || '';
   function update() {
     var n = Math.max(1, Math.min(999, parseInt(input.value, 10) || 1));
     var unit = n <= 3 ? 189 : n <= 5 ? 179 : 169, tier = n <= 3 ? 'tier1' : n <= 5 ? 'tier2' : 'tier3';
-    out.textContent = '€' + unit + ' ' + per + ' · ' + tot + ' €' + (unit * n).toLocaleString('en-US');
+    out.textContent = n + ' × €' + unit + ' = €' + (unit * n).toLocaleString('en-US');
+    if (note) { note.hidden = n <= 10; note.textContent = n > 10 ? more.replace('{n}', n) : ''; }
     pay.href = 'https://buy.stripe.com/' + (n <= 10 ? L[n] : MORE);
     pay.setAttribute('data-tier', tier);
     document.querySelectorAll('table.tiers tr').forEach(function (tr) { tr.classList.toggle('best', !!tr.querySelector('a[data-where="' + tier + '"]')); });

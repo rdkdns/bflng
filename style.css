@@ -570,3 +570,4 @@ html:not(.gated) .gate:has(.gate-fail:not([hidden])) > :not(.gate-fail){display:
 .price-big .pb-best{border-color:var(--forest);box-shadow:0 0 0 1px var(--forest)}
 .pb-rule{margin:6px 0 14px;font-weight:600}
 @media(max-width:480px){.price-big .pb-p{font-size:32px}}
+.qty-total{font-size:22px;font-weight:800;color:var(--forest)}

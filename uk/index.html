@@ -127,7 +127,7 @@
         <p class="pb-rule">Ціна діє для кожного зразка в замовленні.</p>
       </div>
       <div class="sheet price-sheet">
-        <div class="qty-box" data-per="за зразок" data-total="разом"><label class="qty-label" for="bfQty">Скільки зразків?</label> <input id="bfQty" type="number" inputmode="numeric" min="1" max="999" step="1" value="1"> <span class="qty-total" id="bfQtyTotal" aria-live="polite"></span> <a class="btn btn-lime" id="bfQtyPay" href="#pricing" data-where="qty">Замовити й оплатити</a><p class="qty-note">До 10 зразків сторінка оплати відкриється з уже вказаною кількістю. Для 11 і більше вкажіть там точну кількість у полі «Qty».</p></div>
+        <div class="qty-box" data-more="На наступній сторінці вкажіть кількість зразків: {n}."><label class="qty-label" for="bfQty">Скільки зразків?</label> <input id="bfQty" type="number" inputmode="numeric" min="1" max="999" step="1" value="1"> <span class="qty-total" id="bfQtyTotal" aria-live="polite"></span> <a class="btn btn-lime" id="bfQtyPay" href="#pricing" data-where="qty">Замовити й оплатити</a><p class="qty-note" id="bfQtyNote" hidden></p></div>
           <table class="tiers"><tbody>
           <tr><th scope="row">1–3 зразки</th><td>189 € <small>/ зразок</small></td><td class="pay"><a class="btn btn-lime btn-sm" href="https://buy.stripe.com/5kQ28rbkj68E67hgg93Je00" rel="noopener" data-where="tier1">Замовити й оплатити</a></td></tr>
           <tr><th scope="row">4 або 5 зразків</th><td>179 € <small>/ зразок</small></td><td class="pay"><a class="btn btn-lime btn-sm" href="https://buy.stripe.com/fZu5kD0FFeFa53d4xr3Je01" rel="noopener" data-where="tier2">Замовити й оплатити</a></td></tr>
