@@ -232,18 +232,31 @@
   }
 })();
 
-// Quantity box (25 Nov 2026): price steps 1-3 / 4-5 / 6+ on the page; the buyer is sent to the Stripe link of the matching step.
+// Quantity box (25 Nov 2026): the buyer types the number of samples; the price step (1-3 EUR 189, 4-5 EUR 179, 6+ EUR 169) applies to every sample.
+// Up to 10 samples each number has its own Stripe link with that quantity preset; 11+ opens the EUR 169 link where the buyer sets the number.
 (function () {
   var box = document.querySelector('.qty-box'); if (!box) return;
   var input = document.getElementById('bfQty'), out = document.getElementById('bfQtyTotal'), pay = document.getElementById('bfQtyPay');
-  var links = {}; document.querySelectorAll('table.tiers a[data-where]').forEach(function (a) { links[a.getAttribute('data-where')] = a.href; });
+  var L = ['', '14A4gz0FF40wcvF8NH3Je03', '28EdR92NN7cI1R15Bv3Je04', '7sYbJ1ewvfJe0MX8NH3Je05', 'eVqbJ13RR2WseDNaVP3Je06', 'cNibJ11JJaoU2V5bZT3Je07',
+           '00w14nbkj9kQ2V55Bv3Je08', '8x228r743bsYcvF3tn3Je09', 'fZu6oH3RRaoUbrBd3X3Je0a', '14A9ATbkj9kQ0MXbZT3Je0b', '6oU7sL2NNfJe3Z93tn3Je0c'];
+  var MORE = '6oU8wPgED8gM67hbZT3Je0d';
   var per = box.getAttribute('data-per'), tot = box.getAttribute('data-total');
   function update() {
     var n = Math.max(1, Math.min(999, parseInt(input.value, 10) || 1));
     var unit = n <= 3 ? 189 : n <= 5 ? 179 : 169, tier = n <= 3 ? 'tier1' : n <= 5 ? 'tier2' : 'tier3';
     out.textContent = '€' + unit + ' ' + per + ' · ' + tot + ' €' + (unit * n).toLocaleString('en-US');
-    if (links[tier]) { pay.href = links[tier]; pay.setAttribute('data-tier', tier); }
+    pay.href = 'https://buy.stripe.com/' + (n <= 10 ? L[n] : MORE);
+    pay.setAttribute('data-tier', tier);
     document.querySelectorAll('table.tiers tr').forEach(function (tr) { tr.classList.toggle('best', !!tr.querySelector('a[data-where="' + tier + '"]')); });
   }
   input.addEventListener('input', update); update();
+  var MIN = { tier1: 1, tier2: 4, tier3: 6 };
+  document.querySelectorAll('table.tiers a[data-where]').forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      var m = MIN[a.getAttribute('data-where')] || 1;
+      if ((parseInt(input.value, 10) || 0) < m || (m < 4 && input.value > 3) || (m === 4 && input.value > 5)) input.value = m;
+      update(); box.scrollIntoView({ behavior: 'smooth', block: 'center' }); input.focus(); input.select();
+    });
+  });
 })();
