@@ -125,7 +125,8 @@
         <p class="band-p">Замовте один зразок або весь земельний банк. Ціна за зразок знижується зі збільшенням кількості.</p>
       </div>
       <div class="sheet price-sheet">
-        <table class="tiers"><tbody>
+        <div class="qty-box" data-per="за зразок" data-total="разом"><label class="qty-label" for="bfQty">Скільки зразків?</label> <input id="bfQty" type="number" inputmode="numeric" min="1" max="999" step="1" value="1"> <span class="qty-total" id="bfQtyTotal">€189 за зразок · разом €189</span> <a class="btn btn-lime" id="bfQtyPay" href="#pricing" data-where="qty">Замовити й оплатити</a><p class="qty-note">На сторінці оплати вкажіть ту саму кількість зразків.</p></div>
+          <table class="tiers"><tbody>
           <tr><th scope="row">1–3 зразки</th><td>189 € <small>/ зразок</small></td><td class="pay"><a class="btn btn-lime btn-sm" href="https://buy.stripe.com/5kQ28rbkj68E67hgg93Je00" rel="noopener" data-where="tier1">Замовити й оплатити</a></td></tr>
           <tr><th scope="row">4 або 5 зразків</th><td>179 € <small>/ зразок</small></td><td class="pay"><a class="btn btn-lime btn-sm" href="https://buy.stripe.com/fZu5kD0FFeFa53d4xr3Je01" rel="noopener" data-where="tier2">Замовити й оплатити</a></td></tr>
           <tr class="best"><th scope="row">6 і більше зразків</th><td>169 € <small>/ зразок</small></td><td class="pay"><a class="btn btn-lime btn-sm" href="https://buy.stripe.com/8x2fZhfAzfJe9jt3tn3Je02" rel="noopener" data-where="tier3">Замовити й оплатити</a></td></tr>

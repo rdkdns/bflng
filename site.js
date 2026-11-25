@@ -231,3 +231,19 @@
     });
   }
 })();
+
+// Quantity box (25 Nov 2026): price steps 1-3 / 4-5 / 6+ on the page; the buyer is sent to the Stripe link of the matching step.
+(function () {
+  var box = document.querySelector('.qty-box'); if (!box) return;
+  var input = document.getElementById('bfQty'), out = document.getElementById('bfQtyTotal'), pay = document.getElementById('bfQtyPay');
+  var links = {}; document.querySelectorAll('table.tiers a[data-where]').forEach(function (a) { links[a.getAttribute('data-where')] = a.href; });
+  var per = box.getAttribute('data-per'), tot = box.getAttribute('data-total');
+  function update() {
+    var n = Math.max(1, Math.min(999, parseInt(input.value, 10) || 1));
+    var unit = n <= 3 ? 189 : n <= 5 ? 179 : 169, tier = n <= 3 ? 'tier1' : n <= 5 ? 'tier2' : 'tier3';
+    out.textContent = '€' + unit + ' ' + per + ' · ' + tot + ' €' + (unit * n).toLocaleString('en-US');
+    if (links[tier]) { pay.href = links[tier]; pay.setAttribute('data-tier', tier); }
+    document.querySelectorAll('table.tiers tr').forEach(function (tr) { tr.classList.toggle('best', !!tr.querySelector('a[data-where="' + tier + '"]')); });
+  }
+  input.addEventListener('input', update); update();
+})();
