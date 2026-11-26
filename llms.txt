@@ -19,6 +19,8 @@ Facts (as of 14 November 2026):
 - [PLFA or DNA soil test: what each tells you and what it costs](https://www.biofiling.eu/plfa-or-dna-soil-test/)
 - [Polish](https://www.biofiling.eu/pl/), [German](https://www.biofiling.eu/de/), [Ukrainian](https://www.biofiling.eu/uk/)
 
+- [How to take a soil sample for a DNA test: seven steps](https://www.biofiling.eu/soil-sampling-dna-test/)
+
 ## Turnaround
 - Usually 3 to 4 weeks from the day the sample is received at the laboratory, at most 6 weeks. The assessment step is automated. For comparison, Biome Makers states usually 4 to 6 weeks for the BeCrop Test.
 
